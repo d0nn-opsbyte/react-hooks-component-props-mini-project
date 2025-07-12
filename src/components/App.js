@@ -1,21 +1,36 @@
 import React from "react";
-import About from "./About"
-import Header from "./Header"
-import Posts from "./Posts"
-import Articlelist from "./Articlelist"
 
+function About({ image, about }) {
+  return (
+    <section className="About">
+      <img src={image} alt="About" />
+      <p>{about}</p>
+    </section>
+  );
+}
 
+function Header() {
+  return <header className="Header">Header content</header>;
+}
+
+function Posts() {
+  return <section className="Posts">Posts content</section>;
+}
+
+function ArticleList() {
+  return <section className="ArticleList">Article List content</section>;
+}
 
 function App() {
   return (
     <div className="App">
-      <header name="Don's blog" /> 
-      <About 
-         image="https://via.placeholder.com/215"
-         about="welcome"
-      />
+      <header>Header</header>
+      <aside>Sidebar</aside>
+      <main>Main content</main>
+
+      <About image="https://via.placeholder.com/215" about="Welcome" />
       <Header />
-      <Articlelist />
+      <ArticleList />
       <Posts />
     </div>
   );
